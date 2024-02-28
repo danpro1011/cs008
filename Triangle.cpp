@@ -20,4 +20,50 @@ int helper(int value, int minVal, int maxVal)
 }
 
 //constructor
-Triangle 
+Triangle::Triangle(int size, char border, char fill) : border('#'), fill('*') {
+    if(size < 1)
+    {
+        size = 1;
+    }
+    else if(size > 39)
+    {
+        size = 39;
+    }
+
+    setBorder(border);
+    setFill(fill);
+}
+
+//Member functions
+int Triangle::getSize() const
+{
+    return size;
+}
+
+int Triangle::perimeter() const{
+    return 3 * size;
+}
+
+double Triangle::area() const{
+    return sqrt(3) / 4 * size * size;
+}
+
+void Triangle::grow() {
+    if(size < 39)
+    {
+        size++;
+    }
+}
+
+void Triangle::shrink()
+{
+    if(size > 1)
+    {
+        size--;
+    }
+}
+
+void Triangle::setBorder(char newBorder)
+{
+    if()
+}
